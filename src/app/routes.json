@@ -1,0 +1,8 @@
+[
+	{
+		"stateName": "users",
+		"urlPrefix": "/",
+		"type": "load",
+		"src": "app/main"
+	}
+]

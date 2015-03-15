@@ -1,0 +1,10 @@
+.idea
+coverage
+dist
+test-e2e-compile
+jspm_packages
+node_modules
+
+npm-debug.log
+src/app/todo
+test-unit/app/todo
