@@ -4,6 +4,11 @@ import 'angular-material';
 import 'angular-aria';
 import 'angular-animate';
 
+// Load the Angular Material CSS associated with ngMaterial
+// then load the main.css to provide overrides, etc.
+import 'angular-material/angular-material.css!';
+import 'app/app.css!';
+
 const URL_AVATAR_ICONS = 'app/assets/svg/avatars.svg';
 const URL_ICON_MENU = 'app/assets/svg/menu.svg';
 const URL_ICON_SHARE = 'app/assets/svg/share.svg';
