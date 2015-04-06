@@ -1,6 +1,11 @@
 System.config({
   "baseURL": ".",
   "transpiler": "babel",
+  "babelOptions": {
+    "optional": [
+      "runtime"
+    ]
+  },
   "paths": {
     "*": "*.js",
     "github:*": "../jspm_packages/github/*.js",
@@ -12,39 +17,41 @@ System.config({
 
 System.config({
   "map": {
-    "angular": "github:angular/bower-angular@1.3.14",
-    "angular-animate": "github:angular/bower-angular-animate@1.3.14",
-    "angular-aria": "github:angular/bower-angular-aria@1.3.14",
+    "angular": "github:angular/bower-angular@1.3.15",
+    "angular-animate": "github:angular/bower-angular-animate@1.3.15",
+    "angular-aria": "github:angular/bower-angular-aria@1.3.15",
     "angular-material": "github:angular/bower-material@0.8.3",
-    "angular-mocks": "github:angular/bower-angular-mocks@1.3.14",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.3.15",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.13",
-    "css": "github:systemjs/plugin-css@0.1.6",
+    "babel": "npm:babel@4.7.16",
+    "babel-runtime": "npm:babel-runtime@4.7.16",
+    "css": "github:systemjs/plugin-css@0.1.9",
     "json": "github:systemjs/plugin-json@0.1.0",
     "oclazyload": "github:ocombe/ocLazyLoad@0.6.3",
-    "oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@1.1.5",
+    "oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@1.2.1",
     "github:angular-ui/ui-router@0.2.13": {
-      "angular": "github:angular/bower-angular@1.3.14"
+      "angular": "github:angular/bower-angular@1.3.15"
     },
-    "github:angular/bower-angular-animate@1.3.14": {
-      "angular": "github:angular/bower-angular@1.3.14"
+    "github:angular/bower-angular-animate@1.3.15": {
+      "angular": "github:angular/bower-angular@1.3.15"
     },
-    "github:angular/bower-angular-aria@1.3.14": {
-      "angular": "github:angular/bower-angular@1.3.14"
+    "github:angular/bower-angular-aria@1.3.15": {
+      "angular": "github:angular/bower-angular@1.3.15"
     },
-    "github:angular/bower-angular-mocks@1.3.14": {
-      "angular": "github:angular/bower-angular@1.3.14"
+    "github:angular/bower-angular-mocks@1.3.15": {
+      "angular": "github:angular/bower-angular@1.3.15"
     },
     "github:angular/bower-material@0.8.3": {
-      "angular": "github:angular/bower-angular@1.3.14",
-      "angular-animate": "github:angular/bower-angular-animate@1.3.14",
-      "angular-aria": "github:angular/bower-angular-aria@1.3.14",
-      "css": "github:systemjs/plugin-css@0.1.6"
+      "angular": "github:angular/bower-angular@1.3.15",
+      "angular-animate": "github:angular/bower-angular-animate@1.3.15",
+      "angular-aria": "github:angular/bower-angular-aria@1.3.15",
+      "css": "github:systemjs/plugin-css@0.1.9"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.1.1"
+      "buffer": "npm:buffer@3.1.2"
     },
     "github:jspm/nodelibs-events@0.1.0": {
       "events-browserify": "npm:events-browserify@0.0.1"
@@ -78,19 +85,19 @@ System.config({
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
     },
-    "github:lookfirst/oclazyload-systemjs-router@1.1.5": {
-      "angular": "github:angular/bower-angular@1.3.14",
+    "github:lookfirst/oclazyload-systemjs-router@1.2.1": {
+      "angular": "github:angular/bower-angular@1.3.15",
       "angular-ui-router": "github:angular-ui/ui-router@0.2.13",
-      "oclazyload": "github:ocombe/ocLazyLoad@0.6.3",
+      "oclazyload": "github:ocombe/ocLazyLoad@1.0.0-alpha2",
       "ui-router-extras": "github:christopherthielen/ui-router-extras@0.0.13"
     },
-    "github:systemjs/plugin-css@0.1.6": {
-      "clean-css": "npm:clean-css@3.0.10",
-      "fs": "github:jspm/nodelibs-fs@0.1.1",
+    "github:systemjs/plugin-css@0.1.9": {
+      "clean-css": "npm:clean-css@3.1.9",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:amdefine@0.1.0": {
-      "fs": "github:jspm/nodelibs-fs@0.1.1",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
       "module": "github:jspm/nodelibs-module@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
@@ -98,15 +105,18 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:buffer@3.1.1": {
+    "npm:babel-runtime@4.7.16": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:buffer@3.1.2": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.4",
       "is-array": "npm:is-array@1.0.1"
     },
-    "npm:clean-css@3.0.10": {
+    "npm:clean-css@3.1.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "commander": "npm:commander@2.5.1",
-      "fs": "github:jspm/nodelibs-fs@0.1.1",
+      "commander": "npm:commander@2.6.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
       "http": "github:jspm/nodelibs-http@1.7.1",
       "https": "github:jspm/nodelibs-https@0.1.0",
       "os": "github:jspm/nodelibs-os@0.1.0",
@@ -116,7 +126,7 @@ System.config({
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:commander@2.5.1": {
+    "npm:commander@2.6.0": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
@@ -150,13 +160,14 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "isarray": "npm:isarray@0.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "stream": "npm:stream-browserify@1.0.0",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:source-map@0.1.43": {
       "amdefine": "npm:amdefine@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.1",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },

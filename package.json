@@ -1,14 +1,14 @@
 {
   "name": "systemjs-material-start",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SystemJS Material Start example",
   "author": "Jon Stevens <latchkey@gmail.com>",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-helpers": "^1.2.5",
-    "jspm": "^0.14.0",
-    "protractor": "^1.8.0"
+    "gulp-helpers": "^1.5.2",
+    "jspm": "^0.15.1",
+    "protractor": "^2.0.0"
   },
   "jspm": {
     "directories": {
@@ -16,18 +16,22 @@
       "lib": "src",
       "packages": "jspm_packages"
     },
-    "configFile": "src/system.config.js",
+    "configFile": "system.config.js",
     "dependencies": {
-      "angular": "github:angular/bower-angular@^1.3.14",
-      "angular-animate": "github:angular/bower-angular-animate@^1.3.14",
-      "angular-aria": "github:angular/bower-angular-aria@^1.3.14",
+      "angular": "github:angular/bower-angular@^1.3.15",
+      "angular-animate": "github:angular/bower-angular-animate@^1.3.15",
+      "angular-aria": "github:angular/bower-angular-aria@^1.3.15",
       "angular-material": "github:angular/bower-material@^0.8.3",
-      "angular-mocks": "github:angular/bower-angular-mocks@^1.3.14",
+      "angular-mocks": "github:angular/bower-angular-mocks@^1.3.15",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.13",
       "css": "github:systemjs/plugin-css@^0.1.6",
       "json": "github:systemjs/plugin-json@^0.1.0",
       "oclazyload": "github:ocombe/ocLazyLoad@^0.6.3",
       "oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@^1.1.5"
+    },
+    "devDependencies": {
+      "babel": "npm:babel@^4.7.16",
+      "babel-runtime": "npm:babel-runtime@^4.7.16"
     }
   },
   "repository": {
@@ -38,6 +42,6 @@
     "postinstall": "jspm install",
     "test": "gulp recompile && ./node_modules/gulp-helpers/node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
     "protractor-setup": "./node_modules/.bin/webdriver-manager update --standalone",
-    "protractor-run": "gulp es6-e2e && ./node_modules/.bin/protractor protractor.conf.js"
+    "protractor-run": "gulp babel-e2e && ./node_modules/.bin/protractor protractor.conf.js"
   }
 }
