@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-helpers": "^1.5.2",
+    "gulp-helpers": "^1.5.3",
     "jspm": "^0.15.1",
     "protractor": "^2.0.0"
   },
